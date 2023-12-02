@@ -7,6 +7,25 @@
 #include <fstream>
 #include <chrono>
 #include <map>
+#include <ranges>
+#include <tuple>
+#include <string_view>
+#include <regex>
+
+
+std::vector< std::string > split( std::string line, char delimiter )
+{
+    std::vector< std::string > tokens;
+    std::string token;
+    std::istringstream tokenStream( line );
+    
+    while ( std::getline( tokenStream, token, delimiter ) )
+    {
+        tokens.push_back( token );
+    }
+    
+    return tokens;
+}
 
 std::vector<std::string> read_file(std::string name)
 {
