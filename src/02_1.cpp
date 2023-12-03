@@ -1,4 +1,4 @@
-#define path "../res/02.txt"
+#define path "../res/input02.txt"
 #include "utils.h"
 
 bool processRound(const std::string& round, const std::map<std::string, int>& colors, std::regex& amountRegex) {

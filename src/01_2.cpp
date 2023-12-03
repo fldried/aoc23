@@ -1,4 +1,4 @@
-#define path "../res/01.txt"
+#define path "../res/input01.txt"
 
 #include "utils.h"
 
