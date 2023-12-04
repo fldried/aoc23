@@ -69,6 +69,8 @@
         "ranges": "cpp",
         "span": "cpp",
         "regex": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "deque": "cpp",
+        "queue": "cpp"
     }
 }
