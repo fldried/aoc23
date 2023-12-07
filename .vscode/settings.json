@@ -71,6 +71,16 @@
         "regex": "cpp",
         "string_view": "cpp",
         "deque": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "cstdarg": "cpp",
+        "cwctype": "cpp",
+        "unordered_map": "cpp",
+        "functional": "cpp",
+        "memory_resource": "cpp",
+        "random": "cpp",
+        "numbers": "cpp"
     }
 }
