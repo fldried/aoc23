@@ -1,8 +1,6 @@
 #define path "./input05.txt"
 #include "../utils.h"
 
-
-
 struct Mapping {
    size_t destination_range_start;
    size_t source_range_start;
@@ -72,29 +70,29 @@ int main( ) {
    }
    all_mappings.push_back( parse_mappings( mapping_lines ) );
 
-   for (const SeedPair& pair : seeds) {
-      for (size_t i = 0; i < pair.range; ++i) {
+   for ( const SeedPair& pair : seeds ) {
+      for ( size_t i = 0; i < pair.range; ++i ) {
          std::vector<size_t> skip;
          size_t seed = pair.seed + i;
-         for (size_t j = 0; j < all_mappings.size(); ++j) {
-            for (const Mapping& range : all_mappings[j]) {
-               if (seed >= range.source_range_start && seed < range.source_range_start + range.range_length) {
-                  skip.push_back(range.source_range_start + range.range_length - 1 - seed);
-                  seed = range.destination_range_start + (seed - range.source_range_start);
+         for ( size_t j = 0; j < all_mappings.size( ); ++j ) {
+            for ( const Mapping& range : all_mappings[ j ] ) {
+               if ( seed >= range.source_range_start && seed < range.source_range_start + range.range_length ) {
+                  skip.push_back( range.source_range_start + range.range_length - 1 - seed );
+                  seed = range.destination_range_start + ( seed - range.source_range_start );
                   break;
                }
             }
          }
-         if (!skip.empty()) {
-            i += *std::min_element(skip.begin(), skip.end());
+         if ( !skip.empty( ) ) {
+            i += *std::min_element( skip.begin( ), skip.end( ) );
          }
-         min = std::min(min, seed);
+         min = std::min( min, seed );
       }
    }
-   
+
    auto end = std::chrono::high_resolution_clock::now( );
    std::cout << min << std::endl;
-   std::cout << "Execution time: " << std::chrono::duration_cast<std::chrono::microseconds>( end - start ).count( ) << "μs" << std::endl;
+   std::cout << "Execution time: " << std::chrono::duration_cast< std::chrono::microseconds >( end - start ).count( ) << "μs" << std::endl;
 
    return 0;
 }
