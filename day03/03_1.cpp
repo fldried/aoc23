@@ -1,6 +1,6 @@
-#define path "../res/input03.txt"
+#define path "./input03.txt"
 
-#include "utils.h"
+#include "../utils.h"
 
 int part_numbers_sum( const std::vector<std::string>& grid )
 {

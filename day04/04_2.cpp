@@ -1,5 +1,5 @@
-#define path "../res/input04.txt"
-#include "utils.h"
+#define path "./input04.txt"
+#include "../utils.h"
 
 std::pair<std::vector<int>, std::vector<int>> parse_line( std::string line ) {
    std::vector<std::string> tokens = split( line.substr( line.find( ':' ) + 1 ), '|' );

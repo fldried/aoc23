@@ -1,6 +1,6 @@
-#define path "../res/input03.txt"
+#define path "./input03.txt"
 
-#include "utils.h"
+#include "../utils.h"
 
 int get_full_number( std::vector<std::string>& grid, int x, int& y ) {
     std::string number = "";

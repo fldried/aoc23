@@ -1,6 +1,6 @@
-#define path "../res/input01.txt"
+#define path "./input01.txt"
 
-#include "utils.h"
+#include "../utils.h"
 
 int main(void)
 {

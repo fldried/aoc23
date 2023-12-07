@@ -1,5 +1,5 @@
-#define path "../res/input05.txt"
-#include "utils.h"
+#define path "./input05.txt"
+#include "../utils.h"
 
 struct Mapping {
     size_t destination_range_start;

@@ -1,5 +1,5 @@
-#define path "../res/input02.txt"
-#include "utils.h"
+#define path "./input02.txt"
+#include "../utils.h"
 
 bool processRound(const std::string& round, const std::map<std::string, int>& colors, std::regex& amountRegex) {
     for (const std::string& token : split(round, ',')) {
